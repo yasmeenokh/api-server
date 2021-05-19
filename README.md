@@ -17,6 +17,9 @@ create .env file with PORT variable
 ## Test
 Run the command npm test to test and verify the server and the logger middleware  are working.
 Run the command npm run test for testing .
+
+## Test image : 
+![test](./images/test-lab04.png)
 ## Run
 Start the server using nodemon/npm start
 Visit http://localhost:PORT at the PORT number you've assigned in your .env
@@ -29,4 +32,4 @@ Visit http://localhost:PORT at the PORT number you've assigned in your .env
 
 ## UML Diagram
 
-![uml](./images/Lab02.jpg)
+<!-- ![uml](./images/Lab02.jpg) -->

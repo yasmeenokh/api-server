@@ -19,6 +19,7 @@ const notFound = require('./error-handlers/404');
  */
 const foodRoute = require('./routes/food');
 const clothesRoute = require('./routes/clothes');
+const toDoRoute = require('./routes/todo');
 /**
  * Make use of the morgan cors logger dependencies 
  */
@@ -31,6 +32,8 @@ app.use(logger);
  */ 
 app.use('/api/v1/food', foodRoute);
 app.use('/api/v1/clothes', clothesRoute);
+app.use('/api/v1/todo', toDoRoute);
+
 
 /**
  * This function is used to call the home Route

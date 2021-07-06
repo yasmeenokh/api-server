@@ -30,6 +30,8 @@ Visit http://localhost:PORT at the PORT number you've assigned in your .env
 * https://yasmeen-api-server.herokuapp.com/foo
 * https://yasmeen-api-server.herokuapp.com/api/v1/food
 * https://yasmeen-api-server.herokuapp.com/api/v1/clothes
+* https://yasmeen-api-server.herokuapp.com/api/v1/products
+
 
 ## UML Diagram
 

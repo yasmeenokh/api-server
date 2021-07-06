@@ -1,14 +1,16 @@
 'use strict';
 const mongoose = require('mongoose');
 
-const toDoSchema = new mongoose.Schema({
-  task: {type: String, required: true },
-  assignee: { type: String},
-  difficulty: { type: String},
-  date : {type: Date},
+const ProductsSchema = new mongoose.Schema({
+  name: {type: String, required: true },
+  category: { type: String, required: true},
+  url: { type: String},
+  price : {type: String, required: true},
+  availableQuantity : {type: Number, required: true },
+  inCart : {type: Number, required: true},
     
 });
 
-const toDoModel = mongoose.model('ToDo', toDoSchema);
+const ProductsModel = mongoose.model('Product', ProductsSchema);
 
-module.exports = toDoModel; 
+module.exports = ProductsModel; 

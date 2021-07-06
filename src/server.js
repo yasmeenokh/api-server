@@ -19,7 +19,7 @@ const notFound = require('./error-handlers/404');
  */
 const foodRoute = require('./routes/food');
 const clothesRoute = require('./routes/clothes');
-const toDoRoute = require('./routes/todo');
+const toDoRoute = require('./routes/products');
 /**
  * Make use of the morgan cors logger dependencies 
  */
@@ -32,7 +32,7 @@ app.use(logger);
  */ 
 app.use('/api/v1/food', foodRoute);
 app.use('/api/v1/clothes', clothesRoute);
-app.use('/api/v1/todo', toDoRoute);
+app.use('/api/v1/products', toDoRoute);
 
 
 /**

@@ -13,11 +13,11 @@ const router = express.Router();
 /**
  * Calling our routes and their function
  */
-router.get('/', getAllToDo);
-router.get('/:id', getOneToDo);
-router.post('/', addToDo);
-router.put('/:id', updateToDo);
-router.delete('/:id', deleteToDo);
+router.get('/', getAllProducts);
+router.get('/:id', getOneProduct);
+router.post('/', addProduct);
+router.put('/:id', updateProduct);
+router.delete('/:id', deleteProduct);
 
 /**
  * This function is used to get all clothes saved in the db
@@ -25,7 +25,7 @@ router.delete('/:id', deleteToDo);
  * @param {response} send response
  * @returns {response=json} foodObj
  */
-async function getAllToDo (request, response, next){
+async function getAllProducts (request, response, next){
   try{
     const foodObj =  await dataManager.read();
     response.json(foodObj);
@@ -40,7 +40,7 @@ async function getAllToDo (request, response, next){
  * @param {response} send response
  * @returns {response=json} foodObj
  */
-async function getOneToDo (request, response, next){
+async function getOneProduct (request, response, next){
   try {
     const foodObj = await dataManager.read(request.params.id);
     response.json(foodObj);
@@ -54,7 +54,7 @@ async function getOneToDo (request, response, next){
  * @param {response} send response
  * @returns {response=json} foodObj, status
  */
-async function addToDo (request, response, next){
+async function addProduct (request, response, next){
   try{
     const creatObj = request.body;
     // console.log(creatObj);
@@ -70,7 +70,7 @@ async function addToDo (request, response, next){
  * @param {response} send response
  * @returns {response=json} foodObj
  */
-async function updateToDo (request, response, next){
+async function updateProduct (request, response, next){
   try {
     const foodObj = request.body;
     const updatedFood = await dataManager.update(request.params.id ,foodObj);
@@ -85,7 +85,7 @@ async function updateToDo (request, response, next){
  * @param {response} send response
  * @returns {response=json} foodObj
  */
-async function deleteToDo (request, response, next){
+async function deleteProduct (request, response, next){
   try{
     const foodObj = await dataManager.delete(request.params.id);
     response.json(foodObj);
